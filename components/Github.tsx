@@ -5,7 +5,7 @@ const Github = () => {
             className="flex items-center align-middle justify-center "
             aria-label="link to GitHub"
             target="_blank"
-            href="https://github.com/othamae"
+            href="https://github.com/Othamae/URLCut"
         >
             <svg
                 aria-hidden="true"
