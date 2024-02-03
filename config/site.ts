@@ -1,4 +1,4 @@
 export const siteConfig = {
-	name: 'UrlCorto',
-	description: 'Url shortener',
+	name: 'UrlCut',
+	description: 'Url shortener and QR Generator',
 }
