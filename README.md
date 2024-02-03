@@ -43,3 +43,8 @@ npm run dev
 ```
 
 The application will be available at http://localhost:3000.
+
+
+#### API info
+- [API repo](https://github.com/Othamae/URLCut-API)
+- [API doc](https://urlcut.one/swagger-ui/index.html)
