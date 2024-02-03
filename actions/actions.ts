@@ -4,6 +4,7 @@ import { ShortLinkURLResponse } from '@/lib/type'
 
 const API = process.env.API!
 const API_QR = process.env.API_QR!
+const URL = process.env.URL!
 
 
 export const createShortURL = async (longUrl: string) => {
@@ -16,7 +17,7 @@ export const createShortURL = async (longUrl: string) => {
         throw new Error('Failed to create short URL')
     }
     const data: ShortLinkURLResponse = await res.json()
-    return API + '/' + data.shortUrl
+    return URL + '/' + data.shortUrl
 }
 
 
