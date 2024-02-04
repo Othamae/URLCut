@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
+import { Toaster } from '@/components/ui/toaster'
 import { siteConfig } from '@/config/site'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -31,6 +32,7 @@ export default function RootLayout({
 			<body className={inter.className}>
 				<Navbar />
 				{children}
+				<Toaster />
 				<Footer />
 			</body>
 		</html>
