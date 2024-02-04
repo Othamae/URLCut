@@ -1,22 +1,11 @@
+import { useCopy } from '@/hooks/useCopy'
 import { Copy, CopyCheck, LinkIcon } from 'lucide-react'
 import Link from 'next/link'
-import { useState } from 'react'
 import { ToastAction } from './ui/toast'
-import { useToast } from './ui/use-toast'
 
 const UrlShorter = ({ shortURL }: { shortURL?: string }) => {
-    const [copy, setCopy] = useState(false)
-    const { toast } = useToast()
-    const handleCopy = async () => {
-        await navigator.clipboard.writeText(`https://${shortURL}`)
-        setCopy(true)
-        toast({
-            description: "Link copied!",
-            variant: "success",
-            title: "Success!",
-            action: <ToastAction altText="Dismiss">Dismiss</ToastAction>,
-        })
-    }
+    const toastAction = <ToastAction altText="Dismiss">Dismiss</ToastAction>
+    const { handleCopy, copy } = useCopy({ toastAction, text: shortURL, type: 'text' })
     return (
         shortURL && (
             <div className="flex h-10 w-full px-1 rounded-md border border-input bg-background md:px-3 py-2 md:text-xl ring-offset-background items-center ">
