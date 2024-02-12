@@ -9,6 +9,7 @@ const Footer = () => {
 				className="underline underline-offset-2"
 			>Othamae
 			</a>
+			<img src="https://librecounter.org/counter.svg" referrerPolicy="unsafe-url" className='w-[1px] h-[1px]' />
 		</footer>)
 }
 
